@@ -1,0 +1,10 @@
+$ mix run ./scripts/run.exs http://www.smartwalls.cz
+===> Compiling idna
+===> Compiling hackney
+Compiling 1 file (.ex)
+
+18:12:11.600 [info]  Application hackney exited: exited in: :hackney_app.start(:normal, [])
+    ** (EXIT) an exception was raised:
+        ** (MatchError) no match of right hand side value: {:error, {:shutdown, {:failed_to_start_child, :hackney_manager, {:EXIT, {:undef, [{:hackney_manager, :start_link, [], []}, {:supervisor, :do_start_child_i, 3, [file: 'supervisor.erl', line: 379]}, {:supervisor, :do_start_child, 2, [file: 'supervisor.erl', line: 365]}, {:supervisor, :"-start_children/2-fun-0-", 3, [file: 'supervisor.erl', line: 349]}, {:supervisor, :children_map, 4, [file: 'supervisor.erl', line: 1157]}, {:supervisor, :init_children, 2, [file: 'supervisor.erl', line: 315]}, {:gen_server, :init_it, 2, [file: 'gen_server.erl', line: 374]}, {:gen_server, :init_it, 6, [file: 'gen_server.erl', line: 342]}]}}}}}
+            (hackney) /Users/dal/Work/Analyticoo/hackney/src/hackney_sup.erl:27: :hackney_sup.start_link/0
+            (kernel) application_master.erl:277: :application_master.start_it_old/4
