@@ -17,7 +17,8 @@ Erlang/OTP 21 [erts-10.0.5] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threa
 
 
 ## Error 
-mix run ./scripts/run.exs http://smartwalls.cz
+```
+$ mix run ./scripts/run.exs http://smartwalls.cz
 ===> Compiling idna
 ===> Compiling hackney
 Compiling 1 file (.ex)
@@ -37,10 +38,15 @@ http://smartwalls.cz
     (idna) /Users/dal/projects/erlang-idna/src/idna.erl:145: :idna.encode_1/2
     (hackney) /Users/dal/projects/hackney/src/hackney_url.erl:100: :hackney_url.normalize/2
     (hackney) /Users/dal/projects/hackney/src/hackney.erl:306: :hackney.request/5
+```
 
 ## How to reproduce
 - install dependencies and compile them
-- run: mix run ./scripts/run.exs http://www.smartwalls.cz
+- run
+```
+  $ mix run ./scripts/run.exs http://www.smartwalls.cz
+```
+
 - edit lib/title_fetch.ex
 
 ```
@@ -66,3 +72,4 @@ http://smartwalls.cz
 I have erlang-idna and hackney locally for testing purposes and I removed try/catch block from idna in `a-label` function. 
 When there is the try catch block, it returns bad_label error with ulabel error undef. undef is returned when non-existing function is called.
 
+`_build.broken` - backup of build when this error happened
